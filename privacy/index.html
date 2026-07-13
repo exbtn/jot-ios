@@ -112,29 +112,36 @@ at <a href="mailto:veret.evg@gmail.com">veret.evg@gmail.com</a>.</p>
 <ul>
   <li><strong>Before you sign in</strong>, Jot creates a random identifier stored securely on your device
   (in the iOS Keychain) so your notes can be saved and later linked to an account if you sign in.</li>
-  <li><strong>If you sign in with Google</strong>, we receive basic profile information from Google
-  (such as your name, email address, and profile photo) to create and identify your account.</li>
+  <li><strong>If you sign in with Google</strong>, we receive a Google identity token and your Google
+  account ID, which we use only to create and identify your account. We do not request or store your
+  name, email address, or profile photo.</li>
 </ul>
 
 <h3>Content you create</h3>
-<p>Jot stores the content you enter or import, including:</p>
+<p>What happens to your content depends on which feature you use:</p>
 <ul>
-  <li>Notes/memos you write ("jots"), including any titles, dates, categories, and list items
-  (e.g. films, books, places you're tracking).</li>
-  <li>Text extracted from PDF bills, invoices, and payment confirmations you import. Jot extracts the
-  text on your device and <strong>never uploads or stores the original PDF file</strong> — only the
-  extracted text and the details you confirm (vendor, amount, dates, etc.) are saved.</li>
-  <li>Questions you ask Jot ("Ask") and the answers you receive.</li>
+  <li><strong>Notes/memos ("jots")</strong>, including any titles, dates, categories, and list items
+  (e.g. films, books, places you're tracking), are synced to our backend and linked to your account
+  identity so they're available across your signed-in devices.</li>
+  <li><strong>Bills, invoices, and payment confirmations</strong> you import are processed on your
+  device: Jot extracts the text using on-device text/OCR recognition and <strong>never uploads or
+  stores the original PDF file</strong>. The extracted text is sent to our AI provider (see "Third-Party
+  Services" below) to identify structured details (vendor, amount, dates). Both the extracted text and
+  the confirmed details are stored <strong>only on your device</strong> and are not synced to our
+  backend — unless you choose to turn a bill into a finance entry, in which case that resulting entry
+  syncs like any other note.</li>
+  <li><strong>Questions you ask Jot ("Ask") and the answers you receive</strong> are stored <strong>only
+  on your device</strong> and are never synced to our backend.</li>
 </ul>
-<p><strong>This content is stored as plain text</strong> — it is not end-to-end encrypted. It is protected
-in transit (HTTPS/TLS) and at rest using our backend provider's standard infrastructure security, the same
-way a typical notes app protects your data, but Jot staff or our infrastructure providers could theoretically
-access it if legally compelled or required for debugging/support. We do not read your notes for any other
-purpose.</p>
+<p>Notes/memos synced to our backend are <strong>stored as plain text</strong> — they are not end-to-end
+encrypted. They are protected in transit (HTTPS/TLS) and at rest using our backend provider's standard
+infrastructure security, the same way a typical notes app protects your data, but Jot staff or our
+infrastructure providers could theoretically access it if legally compelled or required for
+debugging/support. We do not read your notes for any other purpose.</p>
 
 <h3>Usage and subscription information</h3>
 <ul>
-  <li>Number of messages/actions used and your remaining credit balance.</li>
+  <li>Number of actions used and your remaining action balance.</li>
   <li>Subscription status (free or Jot Pro) and renewal state.</li>
   <li>Basic diagnostic information needed to operate the service (e.g. request timestamps, error logs).</li>
 </ul>
@@ -147,20 +154,22 @@ App Store; subscription status is confirmed to us through our payments partner, 
   <li>To answer questions you ask about your own notes ("Ask"). This is done by searching your notes
   on your device, then sending your question (and any relevant note content needed to answer it) to our
   AI provider, Anthropic, to generate a response. See "Third-Party Services" below.</li>
-  <li>To extract structured details (vendor, amount, dates) from bills/invoices you import, using the
-  same AI provider.</li>
-  <li>To operate the credits and subscription system (tracking usage, granting Jot Pro credits, renewing
+  <li>To extract structured details (vendor, amount, dates) from bills/invoices you import: the text is
+  extracted on your device, then that extracted text (not the original PDF) is sent to the same AI
+  provider to identify these details.</li>
+  <li>To operate the actions and subscription system (tracking usage, granting Jot Pro actions, renewing
   subscriptions).</li>
   <li>To maintain and improve the reliability of the app (debugging, fraud prevention, abuse prevention).</li>
 </ul>
 <p>We do not use your notes for advertising, and we do not sell your personal information.</p>
 
 <h2>Where Your Information Is Stored</h2>
-<p>Your notes are synced to our backend (built on Convex) so they're available if you reinstall the app or
-sign in on a new device — this is the durable copy of your data. A working copy is also kept on your device
-using Apple's on-device storage (SwiftData) for fast, offline access.</p>
-<p>Your "Ask" conversation history (your questions and Jot's answers) is kept <strong>only on your
-device</strong> and is not synced to our backend.</p>
+<p>Your notes/memos are synced to our backend (built on Convex) so they're available if you reinstall the
+app or sign in on a new device — this is the durable copy of your data. A working copy is also kept on your
+device using Apple's on-device storage (SwiftData) for fast, offline access.</p>
+<p>Your "Ask" conversation history (your questions and Jot's answers) and your imported bills/invoices
+(extracted text and confirmed details) are kept <strong>only on your device</strong> and are not synced to
+our backend — unless you convert a bill into a finance entry, which then syncs like a regular note.</p>
 
 <h2>Third-Party Services</h2>
 <p>Jot relies on the following third-party services to operate. Each only receives the information needed
@@ -176,8 +185,8 @@ to perform its function:</p>
 <tr>
   <td>Anthropic (Claude API)</td>
   <td>Generating answers to your questions and extracting bill details</td>
-  <td>The text of your question/request and relevant note content needed to answer it, sent through
-  our backend</td>
+  <td>The text of your question/request and relevant note content needed to answer it, and text
+  extracted on-device from bills/invoices you import — sent through our backend</td>
 </tr>
 <tr>
   <td>Convex</td>

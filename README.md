@@ -41,6 +41,7 @@ GitHub will publish the policy at:
 
 ```
 https://exbtn.github.io/jot/privacy/
+https://exbtn.github.io/jot-ios/privacy/
 ```
 
 (may take 1–2 minutes on first deploy; note the trailing slash)

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jot – Support</title>
+<meta name="description" content="Help, FAQ, troubleshooting and contact for the Jot iOS app.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5b5b5b;
+    --border: #e2e2e2;
+    --accent: #3b5bfd;
+    --code-bg: #f4f5f7;
+    --ok: #17803d;
+    --err: #c0392b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14151a;
+      --fg: #eaeaea;
+      --muted: #a3a3ad;
+      --border: #2a2b32;
+      --accent: #7d9bff;
+      --code-bg: #1d1e25;
+      --ok: #4ade80;
+      --err: #ff7b6b;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  h1 { font-size: 1.9rem; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.95rem; margin-bottom: 32px; }
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 40px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+  }
+  h3 { font-size: 1rem; margin-top: 24px; margin-bottom: 6px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  code {
+    background: var(--code-bg);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    background: var(--code-bg);
+    margin: 20px 0;
+  }
+  .card p:first-child { margin-top: 0; }
+  .card p:last-child { margin-bottom: 0; }
+  details {
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+  }
+  details summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::before {
+    content: "+";
+    display: inline-block;
+    width: 1.1em;
+    color: var(--muted);
+    font-weight: 400;
+  }
+  details[open] summary::before { content: "–"; }
+  details > *:not(summary) { margin-left: 1.1em; }
+  form { margin-top: 16px; }
+  label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    margin-top: 14px;
+  }
+  input, textarea, select {
+    width: 100%;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--fg);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 9px 11px;
+  }
+  input:focus, textarea:focus, select:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: -1px;
+  }
+  textarea { min-height: 130px; resize: vertical; }
+  button {
+    margin-top: 18px;
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 22px;
+    cursor: pointer;
+  }
+  button:disabled { opacity: 0.55; cursor: default; }
+  .status { margin-top: 12px; font-size: 0.92rem; min-height: 1.4em; }
+  .status.ok { color: var(--ok); }
+  .status.err { color: var(--err); }
+  .hint { color: var(--muted); font-size: 0.85rem; margin-top: 6px; }
+  .hp { position: absolute; left: -9999px; }
+  footer {
+    margin-top: 56px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  footer a { margin-right: 14px; }
+</style>
+</head>
+<body>
+
+<h1>Jot Support</h1>
+<p class="subtitle">Help, answers and a way to reach a human.</p>
+
+<div class="card">
+  <p><strong>Need help? Email <a href="mailto:veret.evg@gmail.com?subject=Jot%20Support">veret.evg@gmail.com</a></strong></p>
+  <p class="hint">We usually reply within 1–2 business days. Including your iOS version and app version
+  (Profile → Scroll to the very bottom) helps a lot.</p>
+</div>
+
+<h2>Frequently asked questions</h2>
+
+<details>
+  <summary>What is Jot?</summary>
+  <p>Jot is a personal-memory app. You capture thoughts, notes, meals, bills, events and contacts in
+  <strong>Memo</strong> mode - Jot figures out what kind of entry it is for you - and then you ask questions
+  over everything you've saved in <strong>Ask</strong> mode.</p>
+</details>
+
+<details>
+  <summary>Do I need an account?</summary>
+  <p>No. Jot works anonymously from the moment you install it, using an identifier stored privately on your
+  device. Signing in is optional and is what lets your notes sync to other devices and survive a
+  reinstall.</p>
+</details>
+
+<details>
+  <summary>What happens to my notes if I sign in later?</summary>
+  <p>Everything you captured anonymously - your notes and your remaining action balance - is merged into your
+  new account automatically. Nothing is lost.</p>
+</details>
+
+<details>
+  <summary>What is an "action"?</summary>
+  <p>An action is one AI request: saving a memo that needs classification, or asking a question. The free tier
+  includes 5 actions per day. Jot Pro includes 200 actions per month witho no daily cap. If a request fails or is
+  deflected, the action is refunded automatically.</p>
+</details>
+
+<details>
+  <summary>How do I manage or cancel Jot Pro?</summary>
+  <p>Subscriptions are billed by Apple. Open the iOS <strong>Settings</strong> app → tap your name →
+  <strong>Subscriptions</strong> → <strong>Jot</strong> to change or cancel. Cancelling keeps Pro active until
+  the end of the paid period. We can't cancel or refund a subscription on your behalf - refunds are requested
+  through <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+</details>
+
+<details>
+  <summary>I bought Jot Pro but the app still shows Free.</summary>
+  <p>Open <strong>Settings → Restore purchases</strong> in the app while signed in to the same Apple Account
+  that made the purchase. Subscription status is granted server-side, so it can take up to a minute to appear.
+  If it still doesn't, email us with the Apple receipt/order ID.</p>
+</details>
+
+<details>
+  <summary>Are my notes private? Are they encrypted?</summary>
+  <p>Your notes are protected in transit (HTTPS/TLS) and at rest by our infrastructure provider, but they are
+  <strong>not end-to-end encrypted</strong> - they're stored as plain text so the AI can answer questions over
+  them. Your Ask conversation history and imported bills stay on your device only. Full detail is in the
+  <a href="../privacy/">Privacy Policy</a>.</p>
+</details>
+
+<details>
+  <summary>Does Jot work offline?</summary>
+  <p>Reading and searching your existing notes works offline, because they're kept in a local copy on your
+  device. Saving a new memo and asking questions need a connection, because those go through the AI.</p>
+</details>
+
+<details>
+  <summary>How do I delete my account and data?</summary>
+  <p>You can delete individual notes any time in the app. For full account deletion, email
+  <a href="mailto:veret.evg@gmail.com?subject=Jot%20account%20deletion%20request">veret.evg@gmail.com</a> from
+  the address on your account, or use the form below and pick "Delete my account".</p>
+</details>
+
+<details>
+  <summary>Which devices are supported?</summary>
+  <p>Jot is an iPhone app and requires a recent version of iOS. There is no Android or web version.</p>
+</details>
+
+<h2>Troubleshooting</h2>
+
+<h3>Notes aren't syncing / missing on a new device</h3>
+<ul>
+  <li>Make sure you're signed in with the same Google account on both devices.</li>
+  <li>Check your network connection - sync is skipped while offline and retried later.</li>
+  <li>Force-quit the app (swipe up from the app switcher) and reopen it to trigger a fresh pull.</li>
+  <li>Notes captured anonymously live only on that device until you sign in.</li>
+</ul>
+
+<h3>"Out of actions" or an unexpected limit</h3>
+<ul>
+  <li>The free tier resets 5 actions every day. Pro grants 200 per month on renewal.</li>
+  <li>Failed or deflected requests are refunded - if your balance still looks wrong, force-quit and reopen.</li>
+</ul>
+
+<h3>Voice capture isn't picking anything up</h3>
+<ul>
+  <li>iOS <strong>Settings → Jot</strong> → make sure <strong>Microphone</strong> and
+  <strong>Speech Recognition</strong> are enabled.</li>
+  <li>Disconnect Bluetooth headsets to rule out a bad input route.</li>
+  <li>Silent mode does not block recording, but a call or another recording app can.</li>
+</ul>
+
+<h3>Ask gives a wrong or empty answer</h3>
+<ul>
+  <li>Ask only searches what you've captured - if the note was never saved, there's nothing to find.</li>
+  <li>Try naming things the way you wrote them (a person's name, a vendor, a month).</li>
+  <li>If an answer is clearly wrong, send us the question you asked - it helps us tune retrieval.</li>
+</ul>
+
+<h3>The app crashes or hangs on launch</h3>
+<ul>
+  <li>Force-quit and reopen.</li>
+  <li>Update to the latest version from the App Store.</li>
+  <li>Restart the device.</li>
+  <li>As a last resort, reinstall. <strong>Only do this while signed in</strong> - anonymous, unsynced notes
+  are lost on delete.</li>
+</ul>
+
+<h2>Contact us</h2>
+<p>Fill this in and it opens a pre-filled email to us in your mail app - just press send there.
+Nothing you type is stored on this page.</p>
+
+<form id="support-form" novalidate>
+  <label for="email">Your email <span class="hint">(so we can reply)</span></label>
+  <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
+
+  <label for="topic">Topic</label>
+  <select id="topic" name="topic">
+    <option>General question</option>
+    <option>Bug report</option>
+    <option>Sync problem</option>
+    <option>Billing / subscription</option>
+    <option>Delete my account</option>
+    <option>Feature request</option>
+  </select>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" required
+    placeholder="What happened? Include your iOS version and app version if you can."></textarea>
+
+  <!-- honeypot: bots fill this, humans never see it -->
+  <input class="hp" type="text" id="company" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+  <button type="submit">Compose email</button>
+  <p class="status" id="status" role="status" aria-live="polite"></p>
+  <p class="hint">Prefer plain email? Write to
+  <a href="mailto:veret.evg@gmail.com?subject=Jot%20Support">veret.evg@gmail.com</a>.</p>
+</form>
+
+<footer>
+  <a href="../privacy/">Privacy Policy</a>
+  <a href="../terms/">Terms of Use</a>
+  <a href="mailto:veret.evg@gmail.com">Contact</a>
+  <div style="margin-top:10px">Jot - personal memory for iOS.</div>
+</footer>
+
+<script>
+// ---------------------------------------------------------------------------
+// The contact form composes an email in the visitor's mail client. This page
+// is static - nothing is submitted to or stored on a server.
+// ---------------------------------------------------------------------------
+const SUPPORT_EMAIL = "veret.evg@gmail.com";
+
+const form = document.getElementById("support-form");
+const statusEl = document.getElementById("status");
+
+function setStatus(text, kind) {
+  statusEl.textContent = text;
+  statusEl.className = "status" + (kind ? " " + kind : "");
+}
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const email = document.getElementById("email").value.trim();
+  const topic = document.getElementById("topic").value;
+  const message = document.getElementById("message").value.trim();
+
+  if (document.getElementById("company").value) return; // honeypot tripped
+  if (!email || !email.includes("@")) {
+    setStatus("Please enter a valid email address so we can reply.", "err");
+    return;
+  }
+  if (message.length < 10) {
+    setStatus("Please add a little more detail to your message.", "err");
+    return;
+  }
+
+  const body = "From: " + email + "\nTopic: " + topic + "\n\n" + message;
+  window.location.href =
+    "mailto:" + SUPPORT_EMAIL +
+    "?subject=" + encodeURIComponent("Jot Support \u2014 " + topic) +
+    "&body=" + encodeURIComponent(body);
+
+  setStatus("Opening your email app\u2026 press send there to deliver it.", "ok");
+});
+</script>
+
+</body>
+</html>

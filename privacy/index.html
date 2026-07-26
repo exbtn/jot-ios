@@ -97,7 +97,7 @@
 <body>
 
 <h1>Privacy Policy for Jot</h1>
-<p class="subtitle">Effective date: July 13, 2026</p>
+<p class="subtitle">Effective date: July 26, 2026</p>
 
 <p>Jot ("the app," "we," "us") is a personal note-taking and memory app for iOS. This policy explains what
 information Jot collects, how it is used, and who it is shared with. It applies to the Jot iOS app and its
@@ -158,7 +158,8 @@ App Store; subscription status is confirmed to us through our payments partner, 
   <li>To store and sync your notes across your signed-in devices.</li>
   <li>To answer questions you ask about your own notes ("Ask"). This is done by searching your notes
   on your device, then sending your question (and any relevant note content needed to answer it) to our
-  AI provider, Anthropic, to generate a response. See "Third-Party Services" below.</li>
+  AI provider (Anthropic, or OpenAI in some configurations) to generate a response. See "Third-Party
+  Services" below.</li>
   <li>To extract structured details (vendor, amount, dates) from bills/invoices you import: the text is
   extracted on your device, then that extracted text (not the original PDF) is sent to the same AI
   provider to identify these details.</li>
@@ -167,6 +168,32 @@ App Store; subscription status is confirmed to us through our payments partner, 
   <li>To maintain and improve the reliability of the app (debugging, fraud prevention, abuse prevention).</li>
 </ul>
 <p>We do not use your notes for advertising, and we do not sell your personal information.</p>
+
+<h2>Legal Bases for Processing (GDPR)</h2>
+<p>If you are in the European Economic Area or the United Kingdom, we process your personal data on the
+following legal bases:</p>
+<table>
+<tr><th>What we do</th><th>Legal basis</th></tr>
+<tr>
+  <td>Storing and syncing your notes; answering your questions; processing bills you import; operating your
+  account</td>
+  <td>Performance of a contract (Art. 6(1)(b) GDPR) — these are the features you asked for by using the app</td>
+</tr>
+<tr>
+  <td>Operating the actions allowance and subscriptions</td>
+  <td>Performance of a contract (Art. 6(1)(b) GDPR)</td>
+</tr>
+<tr>
+  <td>Keeping the service reliable and secure — debugging, error logs, preventing abuse and fraud</td>
+  <td>Our legitimate interests (Art. 6(1)(f) GDPR) in running a working, non-abused service</td>
+</tr>
+<tr>
+  <td>Keeping records required by Polish accounting and tax law</td>
+  <td>Legal obligation (Art. 6(1)(c) GDPR)</td>
+</tr>
+</table>
+<p>Providing this data is not a statutory requirement, but without it the app cannot function — notes cannot
+be synced or questions answered if there is nothing to process.</p>
 
 <h2>Where Your Information Is Stored</h2>
 <p>Your notes/memos are synced to our backend (built on Convex) so they're available if you reinstall the
@@ -185,13 +212,16 @@ to perform its function:</p>
 <tr>
   <td>Google Sign-In</td>
   <td>Account authentication</td>
-  <td>Your Google sign-in and basic profile info (name, email, photo)</td>
+  <td>Google handles the sign-in itself and knows that you signed in to Jot. It returns an identity token
+  to us; we use and store only the account identifier from it</td>
 </tr>
 <tr>
-  <td>Anthropic (Claude API)</td>
+  <td>Anthropic (Claude API) and, in some configurations, OpenAI</td>
   <td>Generating answers to your questions and extracting bill details</td>
   <td>The text of your question/request and relevant note content needed to answer it, and text
-  extracted on-device from bills/invoices you import — sent through our backend</td>
+  extracted on-device from bills/invoices you import — sent through our backend. Anthropic is the default
+  provider; we may route requests to OpenAI instead. Neither provider is permitted to train models on
+  your content</td>
 </tr>
 <tr>
   <td>Convex</td>
@@ -212,6 +242,14 @@ to perform its function:</p>
 
 <p>We do not use third-party advertising or analytics/tracking SDKs in Jot.</p>
 
+<h2>International Transfers</h2>
+<p>We are based in Poland, but some of the providers above (Anthropic, OpenAI, Convex, RevenueCat, Google and
+Apple) are established in the United States, so your data may be processed outside the European Economic Area.
+Where that happens, the transfer is covered by an appropriate safeguard under Chapter V of the GDPR — normally
+the European Commission's Standard Contractual Clauses included in our agreements with those providers, or the
+EU–US Data Privacy Framework where the provider is certified. You can request more detail about the safeguards
+in place by emailing us.</p>
+
 <h2>Your Choices and Rights</h2>
 <ul>
   <li>You can delete individual notes, list items, or bills at any time from within the app.</li>
@@ -220,12 +258,40 @@ to perform its function:</p>
   email <a href="mailto:veret.evg@gmail.com">veret.evg@gmail.com</a>. We will process your request within
   a reasonable time.</li>
 </ul>
+<p>If you are in the EEA or the UK, you also have the right to:</p>
+<ul>
+  <li><strong>access</strong> the personal data we hold about you, and receive a copy of it;</li>
+  <li><strong>rectify</strong> data that is inaccurate or incomplete;</li>
+  <li><strong>erase</strong> your data ("right to be forgotten");</li>
+  <li><strong>restrict</strong> or <strong>object to</strong> processing based on our legitimate interests;</li>
+  <li><strong>data portability</strong> — receive the data you provided in a structured, commonly used,
+  machine-readable format;</li>
+  <li><strong>withdraw consent</strong> at any time, where processing is based on consent, without affecting
+  processing carried out before withdrawal.</li>
+</ul>
+<p>To exercise any of these, email <a href="mailto:veret.evg@gmail.com">veret.evg@gmail.com</a>. We respond
+within one month, as required by the GDPR. We may need to confirm you control the account before acting on a
+request.</p>
+<p>You also have the right to lodge a complaint with a data protection supervisory authority. Our lead
+authority is the Polish <strong>President of the Personal Data Protection Office (Prezes Urzędu Ochrony Danych
+Osobowych, UODO)</strong>, ul. Stawki 2, 00-193 Warsaw, Poland — <a href="https://uodo.gov.pl">uodo.gov.pl</a>.
+You may also complain to the authority in your own country of residence.</p>
+<p>We do not use your data for automated decision-making that produces legal or similarly significant effects
+about you.</p>
+
+<h2>California Residents</h2>
+<p>We do not sell or share your personal information as those terms are defined under the CCPA/CPRA, and we do
+not use it for cross-context behavioural advertising. California residents may request access to or deletion
+of their personal information using the same email address above, and will not be discriminated against for
+exercising those rights.</p>
 
 <h2>Data Retention</h2>
 <p>We retain your account and note content for as long as your account is active, so that your notes remain
 available to you. If you request account deletion, we will delete your stored content and account
 identifiers, except where we are required to retain limited records (e.g. for fraud prevention or legal
-compliance).</p>
+compliance). Accounting records relating to a purchase are kept for the period required by Polish tax law
+(currently five years from the end of the tax year). Diagnostic and error logs are kept only as long as needed
+to investigate problems, and are routinely discarded.</p>
 
 <h2>Children's Privacy</h2>
 <p>Jot is not directed at children. To use Jot you must be at least 13 years old, and at least the minimum age
@@ -248,7 +314,7 @@ date above. Continued use of Jot after changes take effect constitutes acceptanc
   <a href="../support/">Support</a>
   <a href="../terms/">Terms of Use</a>
   <a href="mailto:veret.evg@gmail.com">Contact</a>
-  <div style="margin-top:10px">Jot Privacy Policy — last updated July 13, 2026.</div>
+  <div style="margin-top:10px">Jot Privacy Policy — last updated July 26, 2026.</div>
 </footer>
 
 </body>

@@ -34,7 +34,7 @@ Entries are one wide table with sparse optional columns rather than a set of nor
 
 ### Anonymous-first auth
 
-Users get a free daily balance immediately on install, backed by a Keychain UUID — no sign-in required. Google sign-in merges the anonymous balance and entries into a proper account. Sign in with Apple is ready but parked pending.
+Users get a free daily balance immediately on install, backed by a Keychain UUID — no sign-in required. Signing in with Apple or Google merges the anonymous balance and entries into a proper account.
 
 ### Billing
 
@@ -54,6 +54,6 @@ Memo content is stored plaintext. This is a conscious decision disclosed in the 
 | Backend | Convex (TypeScript) |
 | AI — capture | Anthropic Claude / OpenAI (small model) |
 | AI — retrieve | Anthropic Claude / OpenAI (switchable) |
-| Auth | Anonymous UUID → Google Sign-In |
+| Auth | Anonymous UUID → Sign in with Apple or Google |
 | Subscriptions | RevenueCat |
 | Remote config | Convex `remoteConfig` table, live-subscribed |

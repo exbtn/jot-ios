@@ -97,7 +97,7 @@
 <body>
 
 <h1>Privacy Policy for Jot</h1>
-<p class="subtitle">Effective date: July 26, 2026</p>
+<p class="subtitle">Effective date: July 31, 2026</p>
 
 <p>Jot ("the app," "we," "us") is a personal note-taking and memory app for iOS. This policy explains what
 information Jot collects, how it is used, and who it is shared with. It applies to the Jot iOS app and its
@@ -113,10 +113,14 @@ at <a href="mailto:veret.evg@gmail.com">veret.evg@gmail.com</a>.</p>
 <h2>Information We Collect</h2>
 
 <h3>Account information</h3>
-<p>Jot can be used anonymously or signed in with Google.</p>
+<p>Jot can be used anonymously, or signed in with Apple or with Google.</p>
 <ul>
   <li><strong>Before you sign in</strong>, Jot creates a random identifier stored securely on your device
   (in the iOS Keychain) so your notes can be saved and later linked to an account if you sign in.</li>
+  <li><strong>If you sign in with Apple</strong>, we receive an identity token from Apple and the
+  anonymous user identifier inside it, which we use only to create and identify your account. Jot
+  requests no name and no email address from Apple, so we never receive either — not even a private
+  relay address.</li>
   <li><strong>If you sign in with Google</strong>, we receive a Google identity token and your Google
   account ID, which we use only to create and identify your account. We do not request or store your
   name, email address, or profile photo.</li>
@@ -209,6 +213,12 @@ to perform its function:</p>
 
 <table>
 <tr><th>Service</th><th>Purpose</th><th>What it receives</th></tr>
+<tr>
+  <td>Sign in with Apple</td>
+  <td>Account authentication</td>
+  <td>Apple handles the sign-in itself and knows that you signed in to Jot. It returns an identity token
+  to us; we use and store only the anonymous account identifier from it. No name or email is requested</td>
+</tr>
 <tr>
   <td>Google Sign-In</td>
   <td>Account authentication</td>

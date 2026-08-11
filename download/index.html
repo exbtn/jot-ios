@@ -9,6 +9,9 @@
 <meta property="og:description" content="Your personal memory vault for iPhone.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://exbtn.github.io/jot-ios/download/">
+<meta property="og:image" content="https://exbtn.github.io/jot-ios/download/app-icon.png">
+<link rel="icon" type="image/png" href="./app-icon.png">
+<link rel="apple-touch-icon" href="./app-icon.png">
 <title>Download Jot for iPhone</title>
 <style>
   :root {
@@ -60,16 +63,11 @@
   .icon {
     width: 92px;
     height: 92px;
-    display: grid;
-    place-items: center;
+    display: block;
     margin: 0 auto 24px;
     border-radius: 24px;
-    background: linear-gradient(145deg, #6e5ae6, #3b2c9b);
-    box-shadow: 0 15px 34px rgba(73, 55, 172, 0.3);
-    color: #fff;
-    font-size: 48px;
-    font-weight: 700;
-    letter-spacing: -0.08em;
+    box-shadow: 0 15px 34px rgba(23, 21, 31, 0.24);
+    object-fit: cover;
   }
 
   h1 {
@@ -155,7 +153,7 @@
 <body>
 <main>
   <section class="card" aria-labelledby="title">
-    <div class="icon" aria-hidden="true">J</div>
+    <img class="icon" src="./app-icon.png" width="92" height="92" alt="Jot app icon" fetchpriority="high">
     <h1 id="title">Jot</h1>
     <p class="tagline">Save everything.<br>Ask anything.</p>
 

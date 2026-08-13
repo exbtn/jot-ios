@@ -38,11 +38,11 @@ Users get a free daily balance immediately on install, backed by a Keychain UUID
 
 ### Billing
 
-Free tier: 5 AI actions per day. Jot Pro ($4.99/month): 200 actions per month via RevenueCat. Subscriptions are granted server-side via webhook — the client never self-reports subscription status.
+Free tier: 2 AI actions per day. Jot Pro ($4.99/month): 200 actions per month via RevenueCat. Subscriptions are granted server-side via webhook — the client never self-reports subscription status.
 
 ### Privacy
 
-Memo content is stored plaintext. This is a conscious decision disclosed in the privacy policy: encryption would break server-side AI access to the vault, which is the core product. No third-party analytics.
+Memo content is end-to-end encrypted before it is backed up: the device seals it under a key it generates and never sends, and the backend stores the envelope plus four readable columns it needs to file the row. Ask is deliberately outside that promise — answering a question decrypts the relevant memos on-device and sends them to the AI provider, which the privacy policy states. No third-party analytics.
 
 ---
 

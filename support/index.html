@@ -176,7 +176,7 @@
 <details>
   <summary>What is an "action"?</summary>
   <p>An action is one AI request: saving a memo that needs classification, or asking a question. The free tier
-  includes 5 actions per day. Jot Pro includes 200 actions per month with no daily cap. If a request fails or is
+  includes 2 actions per day. Jot Pro includes 200 actions per month with no daily cap. If a request fails or is
   deflected, the action is refunded automatically.</p>
 </details>
 
@@ -197,10 +197,17 @@
 
 <details>
   <summary>Are my notes private? Are they encrypted?</summary>
-  <p>Your notes are protected in transit (HTTPS/TLS) and at rest by our infrastructure provider, but they are
-  <strong>not end-to-end encrypted</strong> - they're stored as plain text so the AI can answer questions over
-  them. Your Ask conversation history and imported bills stay on your device only. Full detail is in the
-  <a href="../privacy/">Privacy Policy</a>.</p>
+  <p>Notes backed up to our servers are <strong>end-to-end encrypted</strong>. Your device encrypts them before
+  they leave, using a key created on your device that we never receive, so <strong>we can't read them</strong> -
+  and neither can our infrastructure providers. Your Ask conversation history and imported bills stay on your
+  device only.</p>
+  <p><strong>Asking a question is the exception.</strong> The encryption protects your backup, not the AI
+  feature: when you ask Jot something, the notes needed to answer are decrypted on your device and sent to our
+  AI provider, so that content leaves your device readable.</p>
+  <p>The key lives in your device's Keychain. With iCloud Keychain switched on, Apple carries it to your other
+  devices, and it never passes through Jot. The trade-off: <strong>if you lose every device holding the key
+  and the iCloud Keychain copy, we cannot recover your backup</strong> - we have no copy to restore it with.
+  Full detail is in the <a href="../privacy/">Privacy Policy</a>.</p>
 </details>
 
 <details>
@@ -234,7 +241,7 @@
 
 <h3>"Out of actions" or an unexpected limit</h3>
 <ul>
-  <li>The free tier resets 5 actions every day. Pro grants 200 per month on renewal.</li>
+  <li>The free tier resets 2 actions every day. Pro grants 200 per month on renewal.</li>
   <li>Failed or deflected requests are refunded - if your balance still looks wrong, force-quit and reopen.</li>
 </ul>
 

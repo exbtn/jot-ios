@@ -97,7 +97,7 @@
 <body>
 
 <h1>Privacy Policy for Jot</h1>
-<p class="subtitle">Effective date: August 4, 2026</p>
+<p class="subtitle">Effective date: August 12, 2026</p>
 
 <p>Jot ("the app," "we," "us") is a personal note-taking and memory app for iOS. This policy explains what
 information Jot collects, how it is used, and who it is shared with. It applies to the Jot iOS app and its
@@ -142,11 +142,27 @@ at <a href="mailto:veret.evg@gmail.com">veret.evg@gmail.com</a>.</p>
   <li><strong>Questions you ask Jot ("Ask") and the answers you receive</strong> are stored <strong>only
   on your device</strong> and are never synced to our backend.</li>
 </ul>
-<p>Notes/memos synced to our backend are <strong>stored as plain text</strong> — they are not end-to-end
-encrypted. They are protected in transit (HTTPS/TLS) and at rest using our backend provider's standard
-infrastructure security, the same way a typical notes app protects your data, but Jot staff or our
-infrastructure providers could theoretically access it if legally compelled or required for
-debugging/support. We do not read your notes for any other purpose.</p>
+<p>Notes/memos synced to our backend are <strong>end-to-end encrypted</strong>. Your device encrypts the
+content before it leaves — the text you wrote and everything Jot derived from it, such as the category,
+tags, amounts, vendors and titles — using a key created on your device that is never sent to us. Alongside
+the encrypted content our backend stores only what it needs to file it: which account it belongs to, an
+identifier for the note, when it was created, and whether it came from the one-time "Let's meet"
+introduction. <strong>We cannot read your notes.</strong> Neither can our infrastructure providers, and a
+legal demand for them would return only encrypted data that we have no way to decrypt.</p>
+
+<p>The key is kept in your device's Keychain. If you have iCloud Keychain switched on, Apple carries it to
+your other devices; it never passes through Jot. This has a consequence worth understanding:
+<strong>if you lose every device that holds the key, along with the iCloud Keychain copy, we cannot recover
+your backup</strong> — there is no copy of the key on our side to restore it with.</p>
+
+<p><strong>Asking a question is different.</strong> The encryption protects your backup, not the AI feature.
+When you ask Jot something, your question and the note content needed to answer it are decrypted on your
+device and sent to our AI provider (see "Third-Party Services" below), so that content leaves your device
+readable.</p>
+
+<p>Notes backed up by earlier app versions, before encryption was added, were stored as plain text. When you
+update to a version that supports encryption, your device re-uploads them encrypted and the readable copies
+are replaced.</p>
 
 <h3>Usage and subscription information</h3>
 <ul>
@@ -250,8 +266,9 @@ be synced or questions answered if there is nothing to process.</p>
 
 <h2>Where Your Information Is Stored</h2>
 <p>Your notes/memos are synced to our backend (built on Convex) so they're available if you reinstall the
-app or sign in on a new device — this is the durable copy of your data. A working copy is also kept on your
-device using Apple's on-device storage (SwiftData) for fast, offline access.</p>
+app or sign in on a new device — this is the durable copy of your data, and it is encrypted (see "Content
+you create" above). A working copy is also kept on your device using Apple's on-device storage (SwiftData),
+in readable form, so that search and offline access work.</p>
 <p>Your "Ask" conversation history (your questions and Jot's answers) and your imported bills/invoices
 (extracted text and confirmed details) are kept <strong>only on your device</strong> and are not synced to
 our backend — unless you convert a bill into a finance entry, which then syncs like a regular note.</p>
@@ -285,7 +302,8 @@ to perform its function:</p>
 <tr>
   <td>Convex</td>
   <td>Backend database and sync</td>
-  <td>Your notes/content, account identifiers, and credit/subscription state</td>
+  <td>Your note content in encrypted form, which Convex cannot decrypt, plus account identifiers and
+  credit/subscription state</td>
 </tr>
 <tr>
   <td>RevenueCat</td>
@@ -397,7 +415,7 @@ date above. Continued use of Jot after changes take effect constitutes acceptanc
   <a href="../support/">Support</a>
   <a href="../terms/">Terms of Use</a>
   <a href="mailto:veret.evg@gmail.com">Contact</a>
-  <div style="margin-top:10px">Jot Privacy Policy — last updated August 4, 2026.</div>
+  <div style="margin-top:10px">Jot Privacy Policy — last updated August 12, 2026.</div>
 </footer>
 
 </body>

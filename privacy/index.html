@@ -133,12 +133,15 @@ at <a href="mailto:veret.evg@gmail.com">veret.evg@gmail.com</a>.</p>
   (e.g. films, books, places you're tracking), are synced to our backend and linked to your account
   identity so they're available across your signed-in devices.</li>
   <li><strong>Bills, invoices, and payment confirmations</strong> you import are processed on your
-  device: Jot extracts the text using on-device text/OCR recognition and <strong>never uploads or
-  stores the original PDF file</strong>. The extracted text is sent to our AI provider (see "Third-Party
-  Services" below) to identify structured details (vendor, amount, dates). Both the extracted text and
-  the confirmed details are stored <strong>only on your device</strong> and are not synced to our
-  backend — unless you choose to turn a bill into a finance entry, in which case that resulting entry
-  syncs like any other note.</li>
+  device: Jot extracts the text using on-device text/OCR recognition. The extracted text is sent to our
+  AI provider (see "Third-Party Services" below) to identify structured details (vendor, amount, dates).
+  Both the extracted text and the confirmed details are stored <strong>only on your device</strong> and
+  are not synced to our backend — unless you choose to turn a bill into a finance entry, in which case
+  that resulting entry syncs like any other note. The imported file itself is kept on your device, and
+  on Jot Pro it is also backed up encrypted (see "Files" below).</li>
+  <li><strong>Files</strong> — the audio of a voice memo, and a bill document you imported — are kept on
+  your device. On the free plan they never leave it. On Jot Pro they are also backed up to our backend,
+  encrypted on your device first, on the same terms as your note content below.</li>
   <li><strong>Questions you ask Jot ("Ask") and the answers you receive</strong> are stored <strong>only
   on your device</strong> and are never synced to our backend.</li>
 </ul>
@@ -163,6 +166,17 @@ readable.</p>
 <p>Notes backed up by earlier app versions, before encryption was added, were stored as plain text. When you
 update to a version that supports encryption, your device re-uploads them encrypted and the readable copies
 are replaced.</p>
+
+<p><strong>Files are backed up on the same terms, on Jot Pro only.</strong> A voice memo's audio and a bill
+document you imported are encrypted on your device before they are uploaded, with the same key that protects
+your notes. The file's name, its type and its size are inside the encrypted part — our backend stores only
+which account it belongs to, an identifier for the file, which note or bill it belongs to, and when it was
+created. <strong>We cannot open your files.</strong> On the free plan nothing is uploaded at all: your files
+stay on your device, and a device that loses them cannot get them back from us.</p>
+
+<p><strong>If your subscription ends</strong>, the files already backed up stay readable to you for 90 days,
+so you can restore or export them. After that they are deleted from our backend. Your own copies on your
+device are never touched by this. Your notes are not affected — they are kept as long as your account is.</p>
 
 <h3>Usage and subscription information</h3>
 <ul>
@@ -302,8 +316,8 @@ to perform its function:</p>
 <tr>
   <td>Convex</td>
   <td>Backend database and sync</td>
-  <td>Your note content in encrypted form, which Convex cannot decrypt, plus account identifiers and
-  credit/subscription state</td>
+  <td>Your note content in encrypted form, which Convex cannot decrypt, plus — on Jot Pro — your files
+  in encrypted form, and account identifiers and credit/subscription state</td>
 </tr>
 <tr>
   <td>RevenueCat</td>
@@ -388,7 +402,8 @@ address above, and will not be discriminated against for exercising those rights
 
 <h2>Data Retention</h2>
 <p>We retain your account and note content for as long as your account is active, so that your notes remain
-available to you. If you request account deletion, we will delete your stored content and account
+available to you. Files backed up on Jot Pro are kept while the subscription is active, and for 90 days after
+it ends, after which they are deleted. If you request account deletion, we will delete your stored content and account
 identifiers, except where we are required to retain limited records (e.g. for fraud prevention or legal
 compliance). Accounting records relating to a purchase are kept for the period required by Polish tax law
 (currently five years from the end of the tax year). Diagnostic and error logs are kept only as long as needed

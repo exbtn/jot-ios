@@ -20,9 +20,9 @@ That's the loop: capture freely, retrieve naturally.
 
 The durable store is [Convex](https://convex.dev). Every entry is written to Convex first; the app keeps a local SwiftData working copy rebuilt from Convex on first launch. Live reactive subscriptions keep remote config and account state in sync without polling. Convex mutations go through a network-timeout wrapper because the Convex mobile SDK queues mutations silently when offline — without the guard, the UI would hang indefinitely.
 
-### Anthropic + OpenAI — AI layer
+### OpenAI + Anthropic — AI layer
 
-The app talks to either Anthropic (Claude) or OpenAI depending on remote config. Claude is the default for both capture and retrieval; the provider and model IDs are hot-switchable server-side without a release. Cheap classification (Memo mode) uses a smaller/faster model; reasoning over the full vault (Ask mode) uses the main model.
+Every app runs OpenAI for both capture and retrieval. The Anthropic (Claude) client is still built in and still wired to the proxy, reachable by pinning a user to that vendor server-side (`users.aiProvider`); model IDs stay hot-switchable server-side without a release. Cheap classification (Memo mode) uses a smaller/faster model; reasoning over the full vault (Ask mode) uses the main model.
 
 ### On-device retrieval
 
@@ -52,8 +52,8 @@ Memo content is end-to-end encrypted before it is backed up: the device seals it
 |---|---|
 | iOS app | Swift / SwiftUI, SwiftData |
 | Backend | Convex (TypeScript) |
-| AI — capture | Anthropic Claude / OpenAI (small model) |
-| AI — retrieve | Anthropic Claude / OpenAI (switchable) |
+| AI — capture | OpenAI (small model); Anthropic Claude still wired in |
+| AI — retrieve | OpenAI; Anthropic Claude still wired in |
 | Auth | Anonymous UUID → Sign in with Apple or Google |
 | Subscriptions | RevenueCat |
 | Remote config | Convex `remoteConfig` table, live-subscribed |

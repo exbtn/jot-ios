@@ -97,7 +97,7 @@
 <body>
 
 <h1>Privacy Policy for Jot</h1>
-<p class="subtitle">Effective date: August 27, 2026</p>
+<p class="subtitle">Effective date: October 25, 2026</p>
 
 <p>Jot ("the app," "we," "us") is a personal note-taking and memory app for iOS. This policy explains what
 information Jot collects, how it is used, and who it is shared with. It applies to the Jot iOS app and its
@@ -132,21 +132,20 @@ at <a href="mailto:veret.evg@gmail.com">veret.evg@gmail.com</a>.</p>
   <li><strong>Notes/memos ("jots")</strong>, including any titles, dates, categories, and list items
   (e.g. films, books, places you're tracking), are synced to our backend and linked to your account
   identity so they're available across your signed-in devices.</li>
-  <li><strong>Bills, invoices, and payment confirmations</strong> you import are processed on your
-  device: Jot extracts the text using on-device text/OCR recognition. The extracted text is sent to our
-  AI provider (see "Third-Party Services" below) to identify structured details (vendor, amount, dates).
-  Both the extracted text and the confirmed details are stored <strong>only on your device</strong> and
-  are not synced to our backend — unless you choose to turn a bill into a finance entry, in which case
-  that resulting entry syncs like any other note. The imported file itself is kept on your device, and
-  on Jot Pro it is also backed up encrypted (see "Files" below).</li>
-  <li><strong>Pictures you share into Jot</strong> (a photo of a receipt, a poster, a note) are read on
-  your device: Jot recognises the text on the picture using on-device text recognition. Only that
-  recognised text is sent to our AI provider (see "Third-Party Services" below) to turn it into a memo.
-  <strong>The picture itself is never sent to the AI provider and never leaves your device for that
-  purpose.</strong> The picture is kept on your device, and on Jot Pro it is also backed up encrypted
-  (see "Files" below).</li>
-  <li><strong>Voice memos</strong> work the other way round from pictures: audio cannot be turned into
-  text on your device, so <strong>the recording itself is sent</strong> — through our backend, to OpenAI's
+  <li><strong>Bills, invoices, and other documents</strong> you import are read by our AI provider (see
+  "Third-Party Services" below) to identify structured details (company, amount, dates). What is sent
+  depends on the file: a PDF that carries its own text is sent as that text; a photo, or a scanned PDF of
+  up to four pages, is sent as pictures; a longer scan is read on your device with on-device text
+  recognition, and only that text is sent. Each document is filed with a note of its own, and the details
+  Jot confirms travel inside that note, so they are synced and encrypted like any other note (see below).
+  The full text read from the file stays <strong>only on your device</strong>. The imported file itself is
+  kept on your device, and on Jot Pro it is also backed up encrypted (see "Files" below).</li>
+  <li><strong>Pictures you share into Jot or attach in the chat</strong> (a photo of a receipt, a poster,
+  a thing you want to remember) <strong>are sent to our AI provider</strong> (see "Third-Party Services"
+  below), which reads the picture to turn it into a memo. A very large picture is made smaller first, and
+  the copy Jot keeps is the same picture that was sent. The picture is kept on your device, and on Jot Pro
+  it is also backed up encrypted (see "Files" below).</li>
+  <li><strong>Voice memos</strong> are sent as audio: <strong>the recording itself is sent</strong> — through our backend, to OpenAI's
   transcription service (see "Third-Party Services" below). The text that comes back becomes the memo. The
   recording is kept on your device, and on Jot Pro it is also backed up encrypted (see "Files" below).
   OpenAI transcribes voice memos whichever AI provider is answering your questions.</li>
@@ -156,7 +155,8 @@ at <a href="mailto:veret.evg@gmail.com">veret.evg@gmail.com</a>.</p>
   below. This is about backup only: a voice memo's audio is sent for transcription on every plan, as
   described above.</li>
   <li><strong>Questions you ask Jot ("Ask") and the answers you receive</strong> are stored <strong>only
-  on your device</strong> and are never synced to our backend.</li>
+  on your device</strong> and are never synced to our backend. When you ask through Siri, Apple's Siri also
+  handles your question and Jot's answer (see "Siri, Shortcuts, Spotlight and widgets" below).</li>
 </ul>
 <p>Notes/memos synced to our backend are <strong>end-to-end encrypted</strong>. Your device encrypts the
 content before it leaves — the text you wrote and everything Jot derived from it, such as the category,
@@ -210,12 +210,11 @@ App Store; subscription status is confirmed to us through our payments partner, 
   on your device, then sending your question (and any relevant note content needed to answer it) to our
   AI provider (OpenAI, or Anthropic in some configurations) to generate a response. See "Third-Party
   Services" below.</li>
-  <li>To extract structured details (vendor, amount, dates) from bills/invoices you import: the text is
-  extracted on your device, then that extracted text (not the original PDF) is sent to the same AI
-  provider to identify these details.</li>
-  <li>To turn a picture you share into a memo: the text on the picture is recognised on your device, then
-  that recognised text (<strong>not the picture</strong>) is sent to the same AI provider to identify the
-  memo's details.</li>
+  <li>To extract structured details (company, amount, dates) from documents you import: the document's
+  text, or pictures of its pages, is sent to the same AI provider to identify these details. "Content you
+  create" above says which is sent for which kind of file.</li>
+  <li>To turn a picture you share or attach into a memo: the picture is sent to the same AI provider,
+  which reads it and identifies the memo's details.</li>
   <li>To turn a voice memo into text: the recording is sent through our backend to OpenAI's transcription
   service, and the text it returns becomes the memo.</li>
   <li>To operate the actions and subscription system (tracking usage, granting Jot Pro actions, renewing
@@ -350,9 +349,28 @@ be synced or questions answered if there is nothing to process.</p>
 app or sign in on a new device — this is the durable copy of your data, and it is encrypted (see "Content
 you create" above). A working copy is also kept on your device using Apple's on-device storage (SwiftData),
 in readable form, so that search and offline access work.</p>
-<p>Your "Ask" conversation history (your questions and Jot's answers) and your imported bills/invoices
-(extracted text and confirmed details) are kept <strong>only on your device</strong> and are not synced to
-our backend — unless you convert a bill into a finance entry, which then syncs like a regular note.</p>
+<p>Your "Ask" conversation history (your questions and Jot's answers) is kept <strong>only on your
+device</strong> and is not synced to our backend. For a document you import, the details Jot confirms sync
+inside its note, as described above; the full text read from the file stays on your device.</p>
+
+<h3>Siri, Shortcuts, Spotlight and widgets</h3>
+<p>These features show your notes outside the Jot app itself. Each is run by Apple's system on your
+device:</p>
+<ul>
+  <li><strong>Siri and Shortcuts.</strong> When you save a memo or ask Jot a question through Siri, Siri
+  turns your speech into text and passes it to Jot, then speaks or shows Jot's reply. What you say and the
+  reply are handled by Apple under Apple's own privacy policy, as for any app you use with Siri. Jot also
+  tells the system when you save or open a note in the app, so that Siri can suggest those actions
+  later.</li>
+  <li><strong>Spotlight.</strong> The titles and text of your notes are added to the Spotlight search index
+  on your device, so that a search on your iPhone can find them. Apple's system features may use what is in
+  that index, under Apple's own privacy policy.</li>
+  <li><strong>Widgets.</strong> To fill the widgets you add, Jot keeps a copy of up to 40 of your notes in
+  a file on your device that only Jot and its widgets can read. On the Lock Screen and in StandBy, note text
+  stays hidden until you choose to show it with the widget's lock icon.</li>
+</ul>
+<p>Deleting a note, or signing out, removes it from Spotlight and from the widgets. You can stop Siri and
+Search from using Jot at any time in your device's Settings, in Jot's Siri options.</p>
 
 <h2>Third-Party Services</h2>
 <p>Jot relies on the following third-party services to operate. Each only receives the information needed
@@ -374,9 +392,11 @@ to perform its function:</p>
 </tr>
 <tr>
   <td>OpenAI and, in some configurations, Anthropic (Claude API)</td>
-  <td>Generating answers to your questions, extracting bill details, and transcribing voice memos</td>
-  <td>The text of your question/request and relevant note content needed to answer it, and text
-  extracted on-device from bills/invoices you import — sent through our backend. Also the audio of a voice
+  <td>Generating answers to your questions, reading documents and pictures, and transcribing voice
+  memos</td>
+  <td>The text of your question/request and relevant note content needed to answer it, and the documents
+  and pictures you import or attach, as text or as pictures (see "Content you create" above) — sent through
+  our backend. Also the audio of a voice
   memo, which goes to OpenAI whichever provider is in use. OpenAI is the provider Jot uses; we may route
   requests to Anthropic instead. Neither provider is permitted to train models on your content</td>
 </tr>
@@ -395,6 +415,12 @@ to perform its function:</p>
   <td>Apple (App Store / StoreKit)</td>
   <td>Processing subscription payments</td>
   <td>Handled entirely by Apple under Apple's own privacy policy</td>
+</tr>
+<tr>
+  <td>Apple (Siri, Spotlight and widgets)</td>
+  <td>Saving and asking through Siri, finding notes in Spotlight, showing notes in widgets</td>
+  <td>What you say to Siri and Jot's reply; the titles and text of your notes in the on-device Spotlight
+  index; the notes shown in the widgets you add. Handled by Apple under Apple's own privacy policy</td>
 </tr>
 <tr>
   <td>PostHog</td>
@@ -522,7 +548,7 @@ date above. Continued use of Jot after changes take effect constitutes acceptanc
   <a href="../support/">Support</a>
   <a href="../terms/">Terms of Use</a>
   <a href="mailto:veret.evg@gmail.com">Contact</a>
-  <div style="margin-top:10px">Jot Privacy Policy — last updated August 27, 2026.</div>
+  <div style="margin-top:10px">Jot Privacy Policy — last updated October 25, 2026.</div>
 </footer>
 
 </body>

@@ -97,7 +97,7 @@
 <body>
 
 <h1>Privacy Policy for Jot</h1>
-<p class="subtitle">Effective date: August 12, 2026</p>
+<p class="subtitle">Effective date: August 27, 2026</p>
 
 <p>Jot ("the app," "we," "us") is a personal note-taking and memory app for iOS. This policy explains what
 information Jot collects, how it is used, and who it is shared with. It applies to the Jot iOS app and its
@@ -197,6 +197,8 @@ device are never touched by this. Your notes are not affected — they are kept 
   <li>Number of actions used and your remaining action balance.</li>
   <li>Subscription status (free or Jot Pro) and renewal state.</li>
   <li>Basic diagnostic information needed to operate the service (e.g. request timestamps, error logs).</li>
+  <li>How the app's features are used, and reports when the app crashes — described in full under
+  "Analytics and Crash Reporting" below, including how to switch it off.</li>
 </ul>
 <p>Jot does not receive or store your payment card details. Purchases are handled entirely by the Apple
 App Store; subscription status is confirmed to us through our payments partner, RevenueCat (see below).</p>
@@ -219,6 +221,8 @@ App Store; subscription status is confirmed to us through our payments partner, 
   <li>To operate the actions and subscription system (tracking usage, granting Jot Pro actions, renewing
   subscriptions).</li>
   <li>To maintain and improve the reliability of the app (debugging, fraud prevention, abuse prevention).</li>
+  <li>To understand which features are used and to find and fix crashes. See "Analytics and Crash
+  Reporting" below, including how to switch it off.</li>
   <li>To show ads to users on the free plan, and to credit actions when you choose to watch a rewarded
   ad. See "Advertising" below.</li>
 </ul>
@@ -261,6 +265,45 @@ nothing from your vault.</strong></p>
 <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or
 apps that use our services</a>.</p>
 
+<h2>Analytics and Crash Reporting</h2>
+
+<p>Jot records how the app is used, and reports when the app crashes, so that problems can be found and
+fixed. This is the only part of Jot that exists to tell us something about you rather than to do something
+for you, so it is worth being exact about what it does and does not include.</p>
+
+<p><strong>What is recorded.</strong> A short, fixed list of events, each one a count of something
+happening: a memo was saved, a question was asked, a voice memo was recorded, a bill was imported, the
+upgrade screen was shown, a purchase completed, sign-in succeeded, the introduction was finished or
+skipped. Alongside an event we record only values drawn from a fixed list — which category a memo was
+filed under, whether it came from typing or from voice, roughly how long a recording was, and which
+screen raised the upgrade prompt.</p>
+
+<p><strong>What is never recorded.</strong> The text of your memos, and their titles, tags, amounts,
+vendors and dates. The questions you ask and the answers you receive. The names or the contents of your
+files. None of this is sent to the analytics or crash-reporting services under any circumstances. The
+list of events is fixed in the app's source code and cannot be extended while the app is running, so no
+change on our side can start collecting your content without a new release.</p>
+
+<p><strong>Jot does not record your screen.</strong> Session replay — the feature some analytics tools
+offer that reconstructs what a user saw and tapped — is switched off deliberately, because Jot puts your
+memos on screen almost everywhere.</p>
+
+<p><strong>What identifies you.</strong> Events carry the same account identifier that our backend files
+your notes under. It is not your name and it is not your email address, because we hold neither. Before
+you sign in it is the random device identifier described under "Account information" above. The analytics
+service also receives your device model, your operating system version, your app version, and the IP
+address your device connects from, from which it derives an approximate location (country or city
+level).</p>
+
+<p><strong>Crash reports</strong> contain the technical state of the app at the moment it stopped: which
+code was running, your device model and operating system version, and the recent events listed above as a
+trail leading up to the crash. They do not contain your content.</p>
+
+<h3>Turning it off</h3>
+<p>You can switch all of this off at any time in <em>Profile &rarr; Data &amp; storage &rarr; Share
+diagnostics</em>. Turning it off stops both the usage events and the crash reports from that device.
+Nothing else about how Jot works changes.</p>
+
 <h2>Legal Bases for Processing (GDPR)</h2>
 <p>If you are in the European Economic Area or the United Kingdom, we process your personal data on the
 following legal bases:</p>
@@ -282,6 +325,11 @@ following legal bases:</p>
 <tr>
   <td>Keeping records required by Polish accounting and tax law</td>
   <td>Legal obligation (Art. 6(1)(c) GDPR)</td>
+</tr>
+<tr>
+  <td>Recording how the app is used, and receiving crash reports, in order to find and fix problems</td>
+  <td>Our legitimate interests (Art. 6(1)(f) GDPR) in knowing which parts of the app work and keeping it
+  reliable. You can object at any time by switching it off — see "Analytics and Crash Reporting" above</td>
 </tr>
 <tr>
   <td>Showing <em>personalised</em> ads on the free plan</td>
@@ -349,6 +397,23 @@ to perform its function:</p>
   <td>Handled entirely by Apple under Apple's own privacy policy</td>
 </tr>
 <tr>
+  <td>PostHog</td>
+  <td>Product analytics — counting how the app's features are used</td>
+  <td>The fixed list of usage events described under "Analytics and Crash Reporting" above, your account
+  identifier, your device model, operating system version and app version, and your IP address.
+  <strong>No note, question, answer, bill or file content is ever sent.</strong> Jot uses PostHog's
+  European Union region, so this data is held in the EU</td>
+</tr>
+<tr>
+  <td>Google Firebase Crashlytics</td>
+  <td>Crash reporting</td>
+  <td>The technical state of the app when it stopped, your device model and operating system version, a
+  Firebase installation identifier, your account identifier, and the recent usage events as a trail
+  leading up to the crash. <strong>No note, question, answer, bill or file content is ever sent.</strong>
+  Only the crash-reporting part of Firebase is built into Jot — Firebase Analytics and Google's
+  advertising measurement libraries are not included in the app</td>
+</tr>
+<tr>
   <td>Google AdMob (free plan only)</td>
   <td>Showing ads, and verifying that a rewarded ad was watched</td>
   <td>Your device's advertising identifier (only if you allow tracking), IP address and the approximate
@@ -364,12 +429,15 @@ to perform its function:</p>
 </tr>
 </table>
 
-<p>Jot uses no analytics SDK and no tracking SDK beyond the advertising described above. On Jot Pro, no
-advertising SDK runs at all.</p>
+<p>Beyond the analytics and crash reporting described above, and the advertising described above, Jot
+uses no other tracking SDK. On Jot Pro, no advertising SDK runs at all. Jot has never included, and does
+not include, any SDK that reads your notes.</p>
 
 <h2>International Transfers</h2>
 <p>We are based in Poland, but some of the providers above (OpenAI, Anthropic, Convex, RevenueCat, Google and
 Apple) are established in the United States, so your data may be processed outside the European Economic Area.
+Analytics data is an exception: Jot uses PostHog's European Union region, so it stays in the EU. Crash reports
+go to Google Firebase Crashlytics and may be processed in the United States.
 Where that happens, the transfer is covered by an appropriate safeguard under Chapter V of the GDPR — normally
 the European Commission's Standard Contractual Clauses included in our agreements with those providers, or the
 EU–US Data Privacy Framework where the provider is certified. You can request more detail about the safeguards
@@ -379,6 +447,8 @@ in place by emailing us.</p>
 <ul>
   <li>You can delete individual notes, list items, or bills at any time from within the app.</li>
   <li>You can sign out of Jot at any time.</li>
+  <li>You can turn analytics and crash reporting off at any time in <em>Profile &rarr; Data &amp; storage
+  &rarr; Share diagnostics</em>. See "Analytics and Crash Reporting" above for what this covers.</li>
   <li>You can change or withdraw your advertising consent at any time — through the privacy options in
   the app if you are in the EEA or UK, and through <em>iOS Settings → Privacy &amp; Security →
   Tracking</em> anywhere. Subscribing to Jot Pro removes ads altogether.</li>
@@ -426,7 +496,10 @@ it ends, after which they are deleted. If you request account deletion, we will 
 identifiers, except where we are required to retain limited records (e.g. for fraud prevention or legal
 compliance). Accounting records relating to a purchase are kept for the period required by Polish tax law
 (currently five years from the end of the tax year). Diagnostic and error logs are kept only as long as needed
-to investigate problems, and are routinely discarded.</p>
+to investigate problems, and are routinely discarded. Usage events are retained by PostHog for as long as
+the project is active; crash reports are retained by Firebase Crashlytics for 90 days. If you switch
+diagnostics off, no further events or reports are sent, and you can ask us to delete what was already
+collected using the email address below.</p>
 
 <h2>Children's Privacy</h2>
 <p>Jot is not directed at children. To use Jot you must be at least 13 years old, and at least the minimum age
@@ -449,7 +522,7 @@ date above. Continued use of Jot after changes take effect constitutes acceptanc
   <a href="../support/">Support</a>
   <a href="../terms/">Terms of Use</a>
   <a href="mailto:veret.evg@gmail.com">Contact</a>
-  <div style="margin-top:10px">Jot Privacy Policy — last updated August 12, 2026.</div>
+  <div style="margin-top:10px">Jot Privacy Policy — last updated August 27, 2026.</div>
 </footer>
 
 </body>

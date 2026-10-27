@@ -97,7 +97,7 @@
 <body>
 
 <h1>Privacy Policy for Jot</h1>
-<p class="subtitle">Effective date: October 26, 2026</p>
+<p class="subtitle">Effective date: October 27, 2026</p>
 
 <p>Jot ("the app," "we," "us") is a personal note-taking and memory app for iOS. This policy explains what
 information Jot collects, how it is used, and who it is shared with. It applies to the Jot iOS app and its
@@ -154,6 +154,8 @@ at <a href="mailto:veret.evg@gmail.com">veret.evg@gmail.com</a>.</p>
   also backed up to our backend, encrypted on your device first, on the same terms as your note content
   below. This is about backup only: a voice memo's audio is sent for transcription on every plan, as
   described above.</li>
+  <li><strong>Feedback you send</strong> — a message to us, with or without a screenshot — is sent
+  readable, not encrypted. See "Feedback You Send" below.</li>
   <li><strong>Questions you ask Jot ("Ask") and the answers you receive</strong> are stored <strong>only
   on your device</strong> and are never synced to our backend. When you ask through Siri, Apple's Siri also
   handles your question and Jot's answer (see "Siri, Shortcuts, Spotlight and widgets" below).</li>
@@ -223,6 +225,8 @@ App Store; subscription status is confirmed to us through our payments partner, 
   <li>To understand which features are used and to find and fix crashes. See "Analytics and Crash
   Reporting" below, including how to switch it off.</li>
   <li>To show ads to users on the free plan. See "Advertising" below.</li>
+  <li>To read and answer feedback you send us, and to fix the problems it reports. See "Feedback You
+  Send" below.</li>
 </ul>
 <p><strong>Your notes are never used for advertising.</strong> No note, question, answer, or bill detail is
 ever sent to an advertising network, used to choose which ad you see, or used to build a profile about you.
@@ -296,6 +300,33 @@ trail leading up to the crash. They do not contain your content.</p>
 diagnostics</em>. Turning it off stops both the usage events and the crash reports from that device.
 Nothing else about how Jot works changes.</p>
 
+<h2>Feedback You Send</h2>
+
+<p>You can send us feedback from <em>Profile &rarr; Feedback &rarr; Send feedback</em>. After you take a
+screenshot in Jot, the app also offers to send it to us as feedback. Nothing is sent unless you tap
+<em>Send</em>.</p>
+
+<p><strong>Screenshots.</strong> iOS does not give Jot the screenshots you take; it only tells Jot that one
+was taken. When you open the feedback form from that offer, Jot attaches its own picture of the Jot screen
+at that moment. You can see it in the form and remove it before sending, or attach a picture from your
+photo library instead. <strong>A screenshot can show your notes, and it is sent readable</strong> — it is
+not covered by the end-to-end encryption that protects your notes.</p>
+
+<p><strong>What is sent.</strong> Your message; the screenshot, if you keep one; your device model,
+operating system version and app version; the app's language, your device's language and region, and
+your time zone; how much free storage your device has; and, if analytics is switched on, the identifiers that
+link your feedback to your analytics events (see "Analytics and Crash Reporting" above). Our backend adds your Jot account number, your plan (free or Jot Pro), and whether you signed in
+with Apple, with Google, or not at all. The random device identifier used before you sign in is never
+included.</p>
+
+<p><strong>Where it goes.</strong> Feedback is stored on our backend (Convex). From there, our backend
+posts it to a private Telegram chat that only the developer of Jot reads, using a Telegram bot. The
+connection to Telegram is made by our backend, never by the app.</p>
+
+<p><strong>Turning off the offer.</strong> You can stop Jot from offering to send feedback after a
+screenshot in <em>Profile &rarr; Feedback &rarr; Offer after screenshots</em>. Sending feedback from
+Profile still works.</p>
+
 <h2>Legal Bases for Processing (GDPR)</h2>
 <p>If you are in the European Economic Area or the United Kingdom, we process your personal data on the
 following legal bases:</p>
@@ -322,6 +353,11 @@ following legal bases:</p>
   <td>Recording how the app is used, and receiving crash reports, in order to find and fix problems</td>
   <td>Our legitimate interests (Art. 6(1)(f) GDPR) in knowing which parts of the app work and keeping it
   reliable. You can object at any time by switching it off — see "Analytics and Crash Reporting" above</td>
+</tr>
+<tr>
+  <td>Reading and answering feedback you send, and fixing the problems it reports</td>
+  <td>Our legitimate interests (Art. 6(1)(f) GDPR) in supporting users and fixing problems. Feedback is
+  only sent when you choose to send it</td>
 </tr>
 <tr>
   <td>Showing <em>personalised</em> ads on the free plan</td>
@@ -396,7 +432,15 @@ to perform its function:</p>
   <td>Convex</td>
   <td>Backend database and sync</td>
   <td>Your note content in encrypted form, which Convex cannot decrypt, plus — on Jot Pro — your files
-  in encrypted form, and account identifiers and credit/subscription state</td>
+  in encrypted form, and account identifiers and credit/subscription state. Also feedback you send,
+  including any screenshot, in readable form (see "Feedback You Send" above)</td>
+</tr>
+<tr>
+  <td>Telegram</td>
+  <td>Delivering feedback you send to the developer of Jot</td>
+  <td>Only feedback you choose to send: your message, any screenshot, and the details listed under
+  "Feedback You Send" above. It is posted by our backend through a Telegram bot into a private chat.
+  Telegram handles it under its own privacy policy</td>
 </tr>
 <tr>
   <td>RevenueCat</td>
@@ -452,6 +496,7 @@ not include, any SDK that reads your notes.</p>
 <h2>International Transfers</h2>
 <p>We are based in Poland, but some of the providers above (OpenAI, Anthropic, Convex, RevenueCat, Google and
 Apple) are established in the United States, so your data may be processed outside the European Economic Area.
+Telegram, which delivers feedback you send, is established outside the European Economic Area too.
 Analytics data is an exception: Jot uses PostHog's European Union region, so it stays in the EU. Crash reports
 go to Google Firebase Crashlytics and may be processed in the United States.
 Where that happens, the transfer is covered by an appropriate safeguard under Chapter V of the GDPR — normally
@@ -468,6 +513,8 @@ in place by emailing us.</p>
   <li>You can change or withdraw your advertising consent at any time — through the privacy options in
   the app if you are in the EEA or UK, and through <em>iOS Settings → Privacy &amp; Security →
   Tracking</em> anywhere. Subscribing to Jot Pro removes ads altogether.</li>
+  <li>You can stop Jot from offering to send feedback after a screenshot in <em>Profile &rarr; Feedback
+  &rarr; Offer after screenshots</em>.</li>
   <li>To request deletion of your account and all associated data, or to request a copy of your data,
   email <a href="mailto:veret.evg@gmail.com">veret.evg@gmail.com</a>. We will process your request within
   a reasonable time.</li>
@@ -512,7 +559,10 @@ it ends, after which they are deleted. If you request account deletion, we will 
 identifiers, except where we are required to retain limited records (e.g. for fraud prevention or legal
 compliance). Accounting records relating to a purchase are kept for the period required by Polish tax law
 (currently five years from the end of the tax year). Diagnostic and error logs are kept only as long as needed
-to investigate problems, and are routinely discarded. Usage events are retained by PostHog for as long as
+to investigate problems, and are routinely discarded. Feedback you send is kept until it is no longer needed to answer you or
+to fix the problem it reports. Deleting your account in the app deletes your feedback, and its screenshots,
+from our backend; the copies already posted to our Telegram chat are not removed automatically, so email us
+and we will delete them. Usage events are retained by PostHog for as long as
 the project is active; crash reports are retained by Firebase Crashlytics for 90 days. If you switch
 diagnostics off, no further events or reports are sent, and you can ask us to delete what was already
 collected using the email address below.</p>
@@ -538,7 +588,7 @@ date above. Continued use of Jot after changes take effect constitutes acceptanc
   <a href="../support/">Support</a>
   <a href="../terms/">Terms of Use</a>
   <a href="mailto:veret.evg@gmail.com">Contact</a>
-  <div style="margin-top:10px">Jot Privacy Policy — last updated October 26, 2026.</div>
+  <div style="margin-top:10px">Jot Privacy Policy — last updated October 27, 2026.</div>
 </footer>
 
 </body>
